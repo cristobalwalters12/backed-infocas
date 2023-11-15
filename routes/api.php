@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/nombreSensor', 'nombreSensorController@index');
+Route::post('/nombreSensor/{id_sensor}', 'nombreSensorController@getNombre');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
