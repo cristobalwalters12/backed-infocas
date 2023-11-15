@@ -5,9 +5,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RespaldoSensor extends Model
+class Sensor extends Model
 {
-    protected $table = 'respaldo_sensores';
+    protected $table = 'sensores';
 
     protected $primaryKey = 'numero_registro';
 
@@ -26,8 +26,6 @@ class RespaldoSensor extends Model
     protected $casts = [
         'temperatura' => 'float',
         'humedad' => 'float',
-        'fecha' => 'date',
-        'hora' => 'time',
     ];
 
     public function nombreSensor()
