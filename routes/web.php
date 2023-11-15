@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\nombreSensorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/nombre-sensor', [RespaldoNombreSensorController::class, 'index']);
-Route::get('/nombre-sensor/{id_sensor}', [RespaldoNombreSensorController::class, 'getNombre']); 
+Route::get('/nombre-sensor', [nombreSensorController::class, 'index']);
+Route::get('/nombre-sensor/{id_sensor}', [nombreSensorController::class, 'getNombre']); 
 
 Route::get('/', function () {
     return view('welcome');

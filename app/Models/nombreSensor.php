@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class nombreSensor extends Model
 {
     use HasFactory;
-    protected $table = 'respaldo_nombres_sensores';
+    protected $table = 'nombres_sensores';
 
     protected $primaryKey = 'id_sensor';
 

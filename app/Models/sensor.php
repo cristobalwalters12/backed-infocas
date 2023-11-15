@@ -32,6 +32,6 @@ class RespaldoSensor extends Model
 
     public function nombreSensor()
     {
-        return $this->belongsTo(RespaldoNombreSensor::class, 'id_sensor');
+        return $this->belongsTo(nombreSensor::class, 'id_sensor');
     }
 }
