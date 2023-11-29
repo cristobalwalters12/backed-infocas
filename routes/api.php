@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\nombreSensorController;
 use App\Http\Controllers\SensorController;
+use App\Http\Controllers\FirestoreController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,8 +25,8 @@ Route::get('/nombre-sensor/{id_sensor}', [nombreSensorController::class, 'getNom
 Route::get('/sensor', [SensorController::class, 'getData']);
 
 
+Route::post('/firebase-login', [FirestoreController::class, 'auth'])->name('login');
 
-Route::post('/login', [UsuarioController::class, 'auth'])->name('login');
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
